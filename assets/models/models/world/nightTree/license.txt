@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tree (part3)
+* source:	https://sketchfab.com/3d-models/tree-part3-52026d1202954b1597f462ee3deda5f3
+* author:	YN14R (https://sketchfab.com/YN14R)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tree (part3)" (https://sketchfab.com/3d-models/tree-part3-52026d1202954b1597f462ee3deda5f3) by YN14R (https://sketchfab.com/YN14R) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
