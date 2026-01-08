@@ -1,0 +1,33 @@
+#canvas {
+    border: 1px solid #ccc;
+    width: 800px;
+    height: 600px;
+    justify-content: space-evenly;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+    justify-content: space-evenly;
+}
+
+.navbar {
+    background-color: #eff2f5; /* Dark blue background color */
+    justify-content: space-evenly;
+}
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    justify-content: space-evenly;
+}
+.navbar-nav .dropdown-menu .dropdown-item {
+    width: auto;
+    text-align: left;
+    background-color: #141312; /* Light gray background */
+    color: #ecdad5; /* Dark gray text color */
+}
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #696766; /* Lighter gray background on hover */
+}

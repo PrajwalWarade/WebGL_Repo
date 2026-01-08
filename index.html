@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/ui/styles.css">
+
+</head>
+
+<body class="dark-theme">
+
+    <div class="container">
+        <div class="row mt-5">
+
+            <div class="col-md-8">
+                <!-- 
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#" class="navbar">Texture Group</a>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                        id="ScenesBtn">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Scenes
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="SceneList">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav> -->
+
+                <h5>WebGL Canvas</h5>
+                <canvas id="TextureGroup" width="800" height="600">
+                    <!-- <canvas id="TextureGroup" width="853" height="600"> -->
+                    This browser does not support HTML5 canvas element.
+                </canvas>
+
+            </div>
+
+            <div class="col-md-4">
+                <br><br>
+                <img src="assets/textures/logo/logoLight.png" alt="Logo" id="themeLogo" height="100" width="150">
+                <br><br><br>
+                <p id="fps"></p>
+                <p id="increment"></p>
+                <p id="time"></p>
+                <br>
+
+                <!-- Theme switch -->
+                <div class="form-check form-switch my-4">
+                    <input class="form-check-input" type="checkbox" id="themeSwitch" checked>
+                    <label class="form-check-label" for="themeSwitch">Dark Mode</label>
+                </div>
+
+                <div>
+                    <button class="btn btn-secondary my-2" id="audioBtn">Mute Audio</button>
+                </div>
+
+                <div id="ui"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="external/gl-matrix-min.js"></script>
+    <script src="external/webgl-utils.js"></script>
+    <script src="external/Mesh.js"></script>
+    <script src="external/Sphere.js"></script>
+    <script src="external/assimpjs.js"></script>
+    <script src="external/dat.gui-0.7.9/build/dat.gui.js"></script>
+
+    <script src="src/ui/UI.js"></script>
+    <script src="src/shapes/Square.js"></script>
+
+    <script src="src/core/Common.js"></script>
+    <script src="src/core/Audio.js"></script>
+    <script src="src/core/ShaderManger.js"></script>
+    <script src="src/core/TextureManger.js"></script>
+    <script src="src/core/Camera.js"></script>
+    <script src="src/core/BSplineCamera.js"></script>
+    <script src="src/core/MatrixStack.js"></script>
+    <script src="src/core/Scene.js"></script>
+    <script src="src/core/FrameBuffer.js"></script>
+    <script src="src/core/OBJLoader/OBJLoader.js"></script>
+    <script src="src/core/TerrainGeom/TerrainGeom.js"></script>
+    <script src="src/core/GrassGoem/GrassGeom.js"></script>
+    <!-- <script src="src/core/GLTFLoader/glTFShader.js"></script>
+    <script src="src/core/GLTFLoader/glTFMesh.js"></script>
+    <script src="src/core/GLTFLoader/glTFLoader.js"></script>
+    <script src="src/core/GLTFLoader/Matrix.js"></script>
+    <script src="src/core/GLTFLoader/Animation.js"></script>
+    <script src="src/core/GLTFLoader/Animator.js"></script> -->
+    <script src="src/core/ModelLoader/ModelLoader.js"></script>
+
+    <script src="src/rendering/ThreeLightsShader/ThreeLightsShader.js"></script>
+    <script src="src/rendering/TerrainShader/TerrainShader.js"></script>
+    <script src="src/rendering/Water/Water.js"></script>
+    <script src="src/rendering/Water/WaterQuadShader.js"></script>
+    <script src="src/rendering/ModelShader/OBJShader.js"></script>
+    <script src="src/rendering/CubeMapShader/CubeMapShader.js"></script>
+    <script src="src/rendering/TextureShader/TextureShader.js"></script>
+    <script src="src/rendering/WaterDisp/WaterDisp.js"></script>
+    <script src="src/rendering/WaterDisp/WaterShaderDisp.js"></script>
+    <script src="src/rendering/ColorShader/ColorCubeShader.js"></script>
+    <script src="src/rendering/BloomShader/BloomShader.js"></script>
+    <script src="src/rendering/ModelShader/CommonModelShader.js"></script>
+    <script src="src/rendering/FireShader/Fire.js"></script>
+    <script src="src/rendering/FireShader/PriorityQueue.js"></script>
+    <script src="src/rendering/SkyDomeShader/SkyDomeShader.js"></script>
+    <script src="src/rendering/PostProcessing/PostProcessing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"></script>
+    <script src="src/rendering/FlowFiled/perlin_noise.js"></script>
+    <!-- <script src="src/rendering/FlowFiled/particle.js"></script>
+    <script src="src/rendering/FlowFiled/FlowFiled.js"></script> -->
+    <script src="src/rendering/ErosionShader/Erosion.js"></script>
+    <script src="src/rendering/GrassShader/GrassShader.js"></script>
+    <script src="src/rendering/WobbalShader/WobbalShader.js"></script>
+    <!-- <script src="src/rendering/RainbowShader/RainbowShader.js"></script> -->
+    <!-- <script src="src/rendering/GlassEffectShader/glassShader.js"></script> -->
+    <!-- <script src="src/rendering/WobbalShader/Jyot.js"></script> -->
+    <script src="src/rendering/ParticleSystem/Particle_Shader.js"></script>
+    <script src="src/rendering/FBM_Noise_Shader/FMB_Noise_Shader.js"></script>
+
+    <script src="src/rendering/FireflyShader/FireflyShader.js"></script>
+    <script src="src/rendering/FireflySystem/FireflySystem.js"></script>
+    <script src="src/rendering/CurtainShader/CurtainShader.js"></script>
+    <script src="src/rendering/CurtainSystem/Curtain.js"></script>
+
+    <script src="src/examples/GLTFRendering.js"></script>
+    <script src="src/examples/ErosionExample.js"></script>
+    <!-- <script src="src/examples/RainbowExample.js"></script> -->
+
+    <script src="src/scenes/MainScene.js"></script>
+
+    <script src="src/scenes/world/world.js"></script>
+    <script src="src/scenes/scene1/Scene1.js"></script>
+    <script src="src/scenes/endcredits/EndCredits-WithModels.js"></script>
+    <script src="src/scenes/fireScene/fireScene.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+    <script src="index.js"></script>
+    <script src="src/scenes/MainModels.js"></script>
+
+    <!-- Chimni Fire Related Scripts-->
+    <script src="src/rendering/ChimniFire/ChimniFire.js"></script>
+    <script src="external/mathHelper.js"></script>
+    <script src="external/otherHelper.js"></script>
+    <script src="external/perlin.js"></script>
+
+
+</body>
+
+</html>
+
+<!-- chrome.exe --disable-web-security--user-data-dir=C:\Users\jagad\OneDrive\Desktop\chromedri -->
