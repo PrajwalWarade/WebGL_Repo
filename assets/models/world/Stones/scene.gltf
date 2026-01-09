@@ -1,0 +1,304 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 5039,
+      "max": [
+        2.1749773025512695,
+        3.007323980331421,
+        1.877821922302246
+      ],
+      "min": [
+        -1.5280590057373047,
+        -3.03901743888855,
+        -1.735055685043335
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 60468,
+      "componentType": 5126,
+      "count": 5039,
+      "max": [
+        0.9955002665519714,
+        0.999742865562439,
+        0.9863107204437256
+      ],
+      "min": [
+        -0.9984168410301208,
+        -0.9990806579589844,
+        -0.9994015693664551
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 5039,
+      "max": [
+        0.999704897403717,
+        0.9999547600746155,
+        0.9997228384017944,
+        1.0
+      ],
+      "min": [
+        -0.9999990463256836,
+        -0.9993667006492615,
+        -0.9994421601295471,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 5039,
+      "max": [
+        0.9982022643089294,
+        0.9984723329544067
+      ],
+      "min": [
+        0.001589086139574647,
+        0.0015131474938243628
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 40312,
+      "componentType": 5126,
+      "count": 5039,
+      "max": [
+        0.9982022643089294,
+        0.9984723329544067
+      ],
+      "min": [
+        0.001589086139574647,
+        0.0015131474938243628
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 24432,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "plasmaernst (https://sketchfab.com/plasmaernst)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/stone-pile01-2aaf12b5892e4f81afd3e1dd4c5c197b",
+      "title": "Stone Pile01"
+    },
+    "generator": "Sketchfab-14.60.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 97728,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 80624,
+      "byteOffset": 97728,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 120936,
+      "byteOffset": 178352,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 80624,
+      "byteOffset": 299288,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 379912,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/M_StonePile01_baseColor.png"
+    },
+    {
+      "uri": "textures/M_StonePile01_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_StonePile01_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "M_StonePile01",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SM_StonePile01_M_StonePile01_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "58b8152d95004585820ffd750a3c94b7.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        -70.87929889741218,
+        -69.89614061038183,
+        -9.521266490600954,
+        0.0,
+        0.691992512525097,
+        12.807776201502952,
+        -99.17399868481066,
+        0.0,
+        70.53826007333835,
+        -70.35972140753508,
+        -8.594385916407067,
+        0.0,
+        14.96990966796875,
+        68.04505157470703,
+        5.44359827041626,
+        1.0
+      ],
+      "name": "SM_StonePile01"
+    },
+    {
+      "mesh": 0,
+      "name": "SM_StonePile01_M_StonePile01_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

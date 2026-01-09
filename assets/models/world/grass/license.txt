@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tuft Of Grass
+* source:	https://sketchfab.com/3d-models/tuft-of-grass-92ef3a61d1244e8186b4129b56e2c83d
+* author:	rk8359041 (https://sketchfab.com/rk8359041)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tuft Of Grass" (https://sketchfab.com/3d-models/tuft-of-grass-92ef3a61d1244e8186b4129b56e2c83d) by rk8359041 (https://sketchfab.com/rk8359041) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
